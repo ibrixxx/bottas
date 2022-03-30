@@ -247,4 +247,5 @@ const prompts = [
     '10',
     'Number one',
     'famous racing numbers',
+    'tweet about crypto',
 ]
