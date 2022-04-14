@@ -81,7 +81,9 @@ exports.tweet = functions.https.onRequest(async (request, response) => {
         response.send(data)
     }
     else {
-        const number = Math.floor( Math.random()*99 + 1 )
+        const i = Math.random()*99 + 1
+        console.log('rnc ',i)
+        const number = Math.floor( i )
         const {data} = await refreshedClient.v2.tweet(`#NFT Racing Number #${number} ${numbers[number]}`)
         response.send(data)
     }
@@ -198,19 +200,26 @@ const prompts = [
     'motorsport fun fact',
     'formula 1 fun fact',
     'tweet about indy car',
+    'tweet that you have 5 eth to spend on NFT art',
     'funny tweet',
-    'viral tweet',
+    'tweet that you buy NFT art',
     'tweet about nft',
-    'praise Racing Number Club',
+    'tweet about Fernando Alonso',
     'tweet about nascar',
+    'tweet about Solana cryptocurrency',
     'tweet about lewis hamilton',
     'tweet about max verstapen',
-    'interesting tweet',
+    'tweet about daniel ricciardo',
+    'tweet about sebastian vettel',
+    'tweet about charles leclerc',
+    'tweet about ferrari f1 team',
+    'tweet that you are buying NFT art from new artists',
     'random fun fact',
+    'make a tweet for the crypto community',
     'tell a joke',
     'tweet that you buy NFT art',
     'tweet about ethereum',
     'ask witch NFT art to buy',
     'brag about something',
-    'tweet a viral tweet'
+    'tweet a viral tweet',
 ]
